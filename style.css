@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+  
+#mapa {
+    height: 100vh;  /* El mapa ocupa el 100% de la altura de la ventana */
+    width: 100%;   /* El mapa ocupa el 100% del ancho*/
+    position: relative; /* El mapa se convierte en el contenedor de referencia */
+}
+  
+#botones-mapa {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    display: flex;
+    flex-direction: column; /* Coloca los botones uno debajo del otro */
+    gap: 10px; /* Espacio entre los botones */
+    z-index: 2; /* Asegura que los botones se muestren por encima del mapa */
+  }
+  
+#boton-localizacion {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 10%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+/* Establecer el círculo negro para llevarte a tu ubicación*/
+#boton-localizacion::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background-color: #000000;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px white;
+}
+  
+/* Cambiar el cursor al pasar por encima*/
+#boton-imagen {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10%;
+
+}
+
+/* Barra azul en la parte inferior */
+#barra-mensaje {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2rem;
+    z-index: 3;
+  }
+  
+@media (max-width: 767px) {
+    #barra-mensaje {
+        font-size: 1rem;
+    }
+}

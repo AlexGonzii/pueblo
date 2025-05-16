@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Museu del Pueblu d' Asturies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://unpkg.com/maplibre-gl@3.2.1/dist/maplibre-gl.css" rel="stylesheet" />
+  <script src="https://unpkg.com/maplibre-gl@3.2.1/dist/maplibre-gl.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="mapa">
+    <div id="botones-mapa">
+      <div id="boton-localizacion" class="boton-localizacion"></div>
+      <img id="boton-imagen" src="img/gijon.jpg" alt="Cambiar Vista"></img>
+    </div>
+  </div>
+  <div id="barra-mensaje">Dirígete al ser mitológico deseado e interactúa con el marcador correspondiente</div>
+  <script src="script.js"></script>
+
+</body>
+</html>

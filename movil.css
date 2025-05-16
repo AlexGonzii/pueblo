@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding-top: 60px;
+    /* Deja espacio para el header fijo */
+    font-family: sans-serif;
+}
+
+/* Header ocupa toda la parte superior */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Asegura que el header esté por encima del video */
+}
+
+/* Contenedor flexible con separación */
+.botones-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    /* Mantiene el padding que separa los lados */
+}
+
+/* Estilo base de los botones */
+button {
+    border: none;
+    border-radius: 15px;
+    /* Esquinas redondeadas */
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* Para usar el pseudo-elemento */
+    overflow: hidden;
+    /* Asegura que el fondo no se desborde */
+}
+
+/* Botones X y Share (T) */
+.imagen-btn {
+    background-color: #4A6A8A;
+    /* Azul oscuro */
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+}
+
+/* Botón RA */
+#ra {
+    background-color: #3A5673;
+    /* Azul intermedio, como en la imagen */
+    width: 80px;
+    /* Define un tamaño fijo para el botón */
+    height: 40px;
+    /* Define el alto del botón */
+    border-radius: 15px 0 0 15px;
+    /* Redondea solo las esquinas izquierdas */
+}
+
+#ra.active {
+    background-color: #000000;
+    /* Fondo negro puro */
+    color: blue;
+    /* Letra azul (usamos el mismo azul de .imagen-btn para consistencia) */
+}
+
+/* Botón Objeto */
+#objeto {
+    background-color: #3A5673;
+    /* Azul intermedio, como en la imagen */
+    width: 100px;
+    /* Define un tamaño fijo para el botón */
+    height: 40px;
+    /* Define el alto del botón */
+    border-radius: 0 15px 15px 0;
+    /* Redondea solo las esquinas derechas */
+}
+
+#objeto.active {
+    background-color: #000000;
+    /* Fondo negro puro */
+    color: blue;
+    /* Letra azul (usamos el mismo azul de .imagen-btn para consistencia) */
+}
+
+/* Centrar los botones RA y Objeto, juntos */
+.centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    /* No hay espacio entre los botones */
+    flex-grow: 1;
+    border-radius: 15px;
+    /* Redondea las esquinas del contenedor */
+    overflow: hidden;
+    /* Evita que el fondo se desborde */
+}
+
+/* Imagen en botón (si aplica) */
+.imagen-btn img {
+    height: 20px;
+    vertical-align: middle;
+}
+
+/* Video de fondo */
+#video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
